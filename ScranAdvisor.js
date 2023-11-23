@@ -19,18 +19,22 @@ ScranAdvisor.prototype.getAllNames = function() {
     });
 }
 
-ScranAdvisor.prototype.findRestaurantsByCity = function(city){
-    return this.restaurants.filter (restaurants => restaurants.city === city);
-}
+// ScranAdvisor.prototype.findRestaurantsByCity = function(city){
+//     // for ... this.restaurants.find (restaurants => restaurants.location.town === city);
 
-const returnElement = (arrayElement, name) => {
-    if (arrayElement.name == name){
-        return arrayElement;
-    } else{
-        return null;
-    }
-  };
+
+
+
+
+ScranAdvisor.prototype.getRestaurantsByCity = function(city){
+    return this.restaurants.filter (restaurant => restaurant.location.town === city);
+}
+// }
   
+
+
+
+
 
 ScranAdvisor.prototype.findRestaurantsByName = function(name){
     return this.restaurants.find (restaurants => restaurants.name === name);

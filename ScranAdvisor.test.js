@@ -118,7 +118,7 @@ describe('ScranAdvisor', () => {
               longitude: -4.255168672861043
             }
           ];
-          const actual = scranAdvisor.findRestaurantsByCity('Glasgow');
+          const actual = scranAdvisor.getRestaurantsByCity('Glasgow');
           expect(actual).toEqual(expected);
     })
 
